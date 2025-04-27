@@ -34,7 +34,8 @@ def extract_wind_direction(metars):
     for metar in metars:
         if re.search(WIND_REGEX, metar):
             for token in metar.split():
-                if re.match(WIND_EX_REGEX, token): winds.append(re.match(WIND_EX_REGEX, token).group(1))
+                if re.match(WIND_EX_REGEX, token):
+                    winds.append(re.match(WIND_EX_REGEX, token).group(1))
     return winds
 
 

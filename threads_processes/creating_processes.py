@@ -11,6 +11,7 @@ def do_work():
     print("Finished work")
 
 
+print(__name__)
 if __name__ == '__main__':
     multiprocessing.set_start_method('spawn')
     for _ in range(5):

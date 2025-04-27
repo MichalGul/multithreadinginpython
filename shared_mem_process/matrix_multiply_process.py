@@ -6,7 +6,7 @@ from multiprocessing import Barrier
 
 from multiprocessing.context import Process
 
-process_count = 8
+process_count = 4
 matrix_size = 200
 random = Random()
 

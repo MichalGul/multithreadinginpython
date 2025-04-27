@@ -8,6 +8,7 @@ matrix_a = [[0] * matrix_size for a in range(matrix_size)]
 matrix_b = [[0] * matrix_size for b in range(matrix_size)]
 result = [[0] * matrix_size for r in range(matrix_size)]
 random = Random()
+# matrix size plus mian thread hence + 1
 work_start = Barrier(matrix_size + 1)
 work_complete = Barrier(matrix_size + 1)
 
@@ -28,6 +29,7 @@ def work_out_row(row):
 for row in range(matrix_size):
     Thread(target=work_out_row, args=([row])).start()
 start = time.time()
+
 for t in range(10):
     generate_random_matrix(matrix_a)
     generate_random_matrix(matrix_b)

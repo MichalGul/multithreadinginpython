@@ -7,14 +7,14 @@ import time
 def consumer(q):
     while (True):
         txt = q.get()
-        print(txt)
+        print(f"Cunsumer consumes: {txt}")
         time.sleep(1)
 
 
 def producer(q):
     while (True):
-        q.put("Hello there")
-        print("Message Sent")
+        q.put("Hello there\n")
+        print("Message Sent\n")
 
 
 q = Queue(maxsize=10)

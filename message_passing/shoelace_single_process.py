@@ -15,7 +15,7 @@ def find_area(points_str):
         a, b = points[i], points[(i + 1) % len(points)]
         area += a[0] * b[1] - a[1] * b[0]
     area = abs(area) / 2.0
-    # print(area)
+    print(area)
 
 
 f = open("polygons.txt", "r")

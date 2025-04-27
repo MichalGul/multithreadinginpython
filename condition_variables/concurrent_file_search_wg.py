@@ -2,7 +2,7 @@ import os
 from os.path import isdir, join
 from threading import Lock, Thread
 
-from condition_variables.wait_group import WaitGroup
+from wait_group import WaitGroup
 
 mutex = Lock()
 matches = []
@@ -26,7 +26,7 @@ def file_search(root, filename, wait_group):
 def main():
     wait_group = WaitGroup()
     wait_group.add(1)
-    t = Thread(target=file_search, args=(["c:/tools", "README.md", wait_group]))
+    t = Thread(target=file_search, args=(["F:\\ex", "README.md", wait_group]))
     t.start()
     wait_group.wait()
     for m in matches:

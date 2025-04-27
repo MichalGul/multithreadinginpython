@@ -24,7 +24,7 @@ def file_search(root, filename):
 
 
 def main():
-    t = Thread(target=file_search, args=(["c:/tools", "README.md"]))
+    t = Thread(target=file_search, args=(["F:\\ex", "README.md"]))
     t.start()
     t.join()
     for m in matches:

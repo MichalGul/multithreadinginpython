@@ -14,6 +14,7 @@ def parent():
     print("Parent Thread is waiting...")
     t.join()
     print("Parent Thread is unblocked...")
-
-
+    print("Doint stuuf")
+    time.sleep(4)
+    print("Parent Thread is done...")
 parent()

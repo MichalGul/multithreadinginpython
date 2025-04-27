@@ -18,7 +18,7 @@ class StingySpendy:
         for i in range(500000):
             self.cv.acquire()
             while self.money < 20:
-                self.cv.wait()
+                self.cv.wait() # wait forever until notified
             self.money -= 20
             if self.money < 0:
                 print("Money in bank", self.money)
