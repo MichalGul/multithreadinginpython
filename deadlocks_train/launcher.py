@@ -1,8 +1,10 @@
 from threading import Lock, Thread
 
-from deadlocks_train.deadlock.train import *
-from deadlocks_train.draw_trains import *
-from deadlocks_train.model import *
+# from deadlock.train import move_train
+# from hierarchy.train import move_train
+from arbitrator.train import move_train
+from draw_trains import *
+from model import *
 
 train_length = 200
 
@@ -32,6 +34,7 @@ def main():
     t2.start()
     t3.start()
     t4.start()
+
     while True:
         train_anim.update_trains(trains, intersections)
         time.sleep(0.01)
